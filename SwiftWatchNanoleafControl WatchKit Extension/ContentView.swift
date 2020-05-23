@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwiftuiWatchNanoleaf WatchKit Extension
+//  SwiftWatchNanoleafControl WatchKit Extension
 //
 //  Created by Renan Caldas on 23/05/20.
 //  Copyright © 2020 Renan Caldas. All rights reserved.
@@ -14,7 +14,7 @@ class ViewModel: ObservableObject {
     var isToggled: Bool = false {
         didSet {
             print("isToggled didSet handler")
-            nanoleaf.toggleLight(isOn: isToggled) 
+            nanoleaf.toggleLight(isOn: isToggled)
         }
     }
     
