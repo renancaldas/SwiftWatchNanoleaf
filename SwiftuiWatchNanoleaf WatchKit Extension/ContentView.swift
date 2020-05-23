@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwiftWatchNanoleaf WatchKit Extension
+//  SwiftuiWatchNanoleaf WatchKit Extension
 //
 //  Created by Renan Caldas on 23/05/20.
 //  Copyright © 2020 Renan Caldas. All rights reserved.
@@ -8,23 +8,27 @@
 
 import SwiftUI
 
-private let nanoleaf = Nanoleaf(
-    IP: "192.168.0.119:16021",
-    token: "RIuhkjxqsiyogaO5r05EZLOSJWRZtHjD"
-)
+private let nanoleaf = Nanoleaf()
 
 class ViewModel: ObservableObject {
     var isToggled: Bool = false {
         didSet {
             print("isToggled didSet handler")
-            nanoleaf.toggleLight(isOn: isToggled)
+            nanoleaf.toggleLight(isOn: isToggled) 
+        }
+    }
+    
+    var sliderValue: Double = 0 {
+        didSet {
+            print("sliderValue: " + String(sliderValue))
+            // nanoleaf.toggleLight(isOn: isToggled)
         }
     }
 }
 
 struct ContentView: View {
     @ObservedObject var model = ViewModel()
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             // Title
@@ -36,14 +40,17 @@ struct ContentView: View {
                 
                 Toggle("", isOn: $model.isToggled)
             }
-            
-            // Brighness
 
             
             Spacer()
             
-            
+            // Brighness
+            Slider(value: $model.sliderValue, in: 0...10, step: 1)
+                .accentColor(Color.green)
+                .rotation3DEffect(Angle(degrees: 20), axis: (x: 1.0, y: 0.0, z: 0.0))
+                
             // GetStatus()
+            /*
             Button(action: {
                 print("Clicked getStatus()")
                 nanoleaf.getStatusAsync() { (status) -> Void in
@@ -52,9 +59,9 @@ struct ContentView: View {
             }) {
                 Text("GetStatus()")
             }
+            */
         }
         .padding(.all)
-        .border(/*@START_MENU_TOKEN@*/Color.gray/*@END_MENU_TOKEN@*/, width: 0.5)
     }
 }
 

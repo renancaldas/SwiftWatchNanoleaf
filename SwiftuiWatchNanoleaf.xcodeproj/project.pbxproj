@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		626F843B2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 626F843A2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		626F84412479CD2B00A3A74A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626F843F2479CD2B00A3A74A /* Interface.storyboard */; };
+		626F84432479CD2B00A3A74A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626F84422479CD2B00A3A74A /* Assets.xcassets */; };
+		626F844A2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 626F84492479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		626F844F2479CD2B00A3A74A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F844E2479CD2B00A3A74A /* ContentView.swift */; };
+		626F84512479CD2B00A3A74A /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F84502479CD2B00A3A74A /* HostingController.swift */; };
+		626F84532479CD2B00A3A74A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F84522479CD2B00A3A74A /* ExtensionDelegate.swift */; };
+		626F84552479CD2B00A3A74A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F84542479CD2B00A3A74A /* NotificationController.swift */; };
+		626F84572479CD2B00A3A74A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F84562479CD2B00A3A74A /* NotificationView.swift */; };
+		626F84592479CD2C00A3A74A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626F84582479CD2C00A3A74A /* Assets.xcassets */; };
+		626F845C2479CD2C00A3A74A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626F845B2479CD2C00A3A74A /* Preview Assets.xcassets */; };
+		626F846E2479CD6600A3A74A /* Nanoleaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F846D2479CD6600A3A74A /* Nanoleaf.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		626F843C2479CD2B00A3A74A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626F84302479CD2B00A3A74A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 626F84392479CD2B00A3A74A;
+			remoteInfo = "SwiftuiWatchNanoleaf WatchKit App";
+		};
+		626F844B2479CD2B00A3A74A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 626F84302479CD2B00A3A74A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 626F84482479CD2B00A3A74A;
+			remoteInfo = "SwiftuiWatchNanoleaf WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		626F84642479CD2C00A3A74A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				626F844A2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626F84682479CD2C00A3A74A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				626F843B2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		626F84362479CD2B00A3A74A /* SwiftuiWatchNanoleaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftuiWatchNanoleaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		626F843A2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftuiWatchNanoleaf WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		626F84402479CD2B00A3A74A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		626F84422479CD2B00A3A74A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		626F84442479CD2B00A3A74A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		626F84492479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SwiftuiWatchNanoleaf WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		626F844E2479CD2B00A3A74A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		626F84502479CD2B00A3A74A /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		626F84522479CD2B00A3A74A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		626F84542479CD2B00A3A74A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		626F84562479CD2B00A3A74A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		626F84582479CD2C00A3A74A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		626F845B2479CD2C00A3A74A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		626F845D2479CD2C00A3A74A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		626F845E2479CD2C00A3A74A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		626F846D2479CD6600A3A74A /* Nanoleaf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nanoleaf.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		626F84462479CD2B00A3A74A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		626F842F2479CD2B00A3A74A = {
+			isa = PBXGroup;
+			children = (
+				626F843E2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App */,
+				626F844D2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension */,
+				626F84372479CD2B00A3A74A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		626F84372479CD2B00A3A74A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				626F84362479CD2B00A3A74A /* SwiftuiWatchNanoleaf.app */,
+				626F843A2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App.app */,
+				626F84492479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		626F843E2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				626F843F2479CD2B00A3A74A /* Interface.storyboard */,
+				626F84422479CD2B00A3A74A /* Assets.xcassets */,
+				626F84442479CD2B00A3A74A /* Info.plist */,
+			);
+			path = "SwiftuiWatchNanoleaf WatchKit App";
+			sourceTree = "<group>";
+		};
+		626F844D2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				626F846C2479CD5400A3A74A /* API */,
+				626F844E2479CD2B00A3A74A /* ContentView.swift */,
+				626F84502479CD2B00A3A74A /* HostingController.swift */,
+				626F84522479CD2B00A3A74A /* ExtensionDelegate.swift */,
+				626F84542479CD2B00A3A74A /* NotificationController.swift */,
+				626F84562479CD2B00A3A74A /* NotificationView.swift */,
+				626F84582479CD2C00A3A74A /* Assets.xcassets */,
+				626F845D2479CD2C00A3A74A /* Info.plist */,
+				626F845E2479CD2C00A3A74A /* PushNotificationPayload.apns */,
+				626F845A2479CD2C00A3A74A /* Preview Content */,
+			);
+			path = "SwiftuiWatchNanoleaf WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		626F845A2479CD2C00A3A74A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				626F845B2479CD2C00A3A74A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		626F846C2479CD5400A3A74A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				626F846D2479CD6600A3A74A /* Nanoleaf.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		626F84352479CD2B00A3A74A /* SwiftuiWatchNanoleaf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626F84692479CD2C00A3A74A /* Build configuration list for PBXNativeTarget "SwiftuiWatchNanoleaf" */;
+			buildPhases = (
+				626F84342479CD2B00A3A74A /* Resources */,
+				626F84682479CD2C00A3A74A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				626F843D2479CD2B00A3A74A /* PBXTargetDependency */,
+			);
+			name = SwiftuiWatchNanoleaf;
+			productName = SwiftuiWatchNanoleaf;
+			productReference = 626F84362479CD2B00A3A74A /* SwiftuiWatchNanoleaf.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		626F84392479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626F84652479CD2C00A3A74A /* Build configuration list for PBXNativeTarget "SwiftuiWatchNanoleaf WatchKit App" */;
+			buildPhases = (
+				626F84382479CD2B00A3A74A /* Resources */,
+				626F84642479CD2C00A3A74A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				626F844C2479CD2B00A3A74A /* PBXTargetDependency */,
+			);
+			name = "SwiftuiWatchNanoleaf WatchKit App";
+			productName = "SwiftuiWatchNanoleaf WatchKit App";
+			productReference = 626F843A2479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		626F84482479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 626F84612479CD2C00A3A74A /* Build configuration list for PBXNativeTarget "SwiftuiWatchNanoleaf WatchKit Extension" */;
+			buildPhases = (
+				626F84452479CD2B00A3A74A /* Sources */,
+				626F84462479CD2B00A3A74A /* Frameworks */,
+				626F84472479CD2B00A3A74A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftuiWatchNanoleaf WatchKit Extension";
+			productName = "SwiftuiWatchNanoleaf WatchKit Extension";
+			productReference = 626F84492479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		626F84302479CD2B00A3A74A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Renan Caldas";
+				TargetAttributes = {
+					626F84352479CD2B00A3A74A = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					626F84392479CD2B00A3A74A = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					626F84482479CD2B00A3A74A = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 626F84332479CD2B00A3A74A /* Build configuration list for PBXProject "SwiftuiWatchNanoleaf" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 626F842F2479CD2B00A3A74A;
+			productRefGroup = 626F84372479CD2B00A3A74A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				626F84352479CD2B00A3A74A /* SwiftuiWatchNanoleaf */,
+				626F84392479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App */,
+				626F84482479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		626F84342479CD2B00A3A74A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626F84382479CD2B00A3A74A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626F84432479CD2B00A3A74A /* Assets.xcassets in Resources */,
+				626F84412479CD2B00A3A74A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		626F84472479CD2B00A3A74A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626F845C2479CD2C00A3A74A /* Preview Assets.xcassets in Resources */,
+				626F84592479CD2C00A3A74A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		626F84452479CD2B00A3A74A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626F84512479CD2B00A3A74A /* HostingController.swift in Sources */,
+				626F846E2479CD6600A3A74A /* Nanoleaf.swift in Sources */,
+				626F844F2479CD2B00A3A74A /* ContentView.swift in Sources */,
+				626F84552479CD2B00A3A74A /* NotificationController.swift in Sources */,
+				626F84532479CD2B00A3A74A /* ExtensionDelegate.swift in Sources */,
+				626F84572479CD2B00A3A74A /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		626F843D2479CD2B00A3A74A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 626F84392479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit App */;
+			targetProxy = 626F843C2479CD2B00A3A74A /* PBXContainerItemProxy */;
+		};
+		626F844C2479CD2B00A3A74A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 626F84482479CD2B00A3A74A /* SwiftuiWatchNanoleaf WatchKit Extension */;
+			targetProxy = 626F844B2479CD2B00A3A74A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		626F843F2479CD2B00A3A74A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				626F84402479CD2B00A3A74A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		626F845F2479CD2C00A3A74A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		626F84602479CD2C00A3A74A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		626F84622479CD2C00A3A74A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftuiWatchNanoleaf WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = L2ESD65B9H;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftuiWatchNanoleaf WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = renancaldas.SwiftuiWatchNanoleaf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		626F84632479CD2C00A3A74A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftuiWatchNanoleaf WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = L2ESD65B9H;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SwiftuiWatchNanoleaf WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = renancaldas.SwiftuiWatchNanoleaf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		626F84662479CD2C00A3A74A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2ESD65B9H;
+				IBSC_MODULE = SwiftuiWatchNanoleaf_WatchKit_Extension;
+				INFOPLIST_FILE = "SwiftuiWatchNanoleaf WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = renancaldas.SwiftuiWatchNanoleaf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		626F84672479CD2C00A3A74A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2ESD65B9H;
+				IBSC_MODULE = SwiftuiWatchNanoleaf_WatchKit_Extension;
+				INFOPLIST_FILE = "SwiftuiWatchNanoleaf WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = renancaldas.SwiftuiWatchNanoleaf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		626F846A2479CD2C00A3A74A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2ESD65B9H;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = renancaldas.SwiftuiWatchNanoleaf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		626F846B2479CD2C00A3A74A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2ESD65B9H;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = renancaldas.SwiftuiWatchNanoleaf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		626F84332479CD2B00A3A74A /* Build configuration list for PBXProject "SwiftuiWatchNanoleaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626F845F2479CD2C00A3A74A /* Debug */,
+				626F84602479CD2C00A3A74A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		626F84612479CD2C00A3A74A /* Build configuration list for PBXNativeTarget "SwiftuiWatchNanoleaf WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626F84622479CD2C00A3A74A /* Debug */,
+				626F84632479CD2C00A3A74A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		626F84652479CD2C00A3A74A /* Build configuration list for PBXNativeTarget "SwiftuiWatchNanoleaf WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626F84662479CD2C00A3A74A /* Debug */,
+				626F84672479CD2C00A3A74A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		626F84692479CD2C00A3A74A /* Build configuration list for PBXNativeTarget "SwiftuiWatchNanoleaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				626F846A2479CD2C00A3A74A /* Debug */,
+				626F846B2479CD2C00A3A74A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 626F84302479CD2B00A3A74A /* Project object */;
+}

@@ -1,6 +1,6 @@
 //
 //  Nanoleaf.swift
-//  SwiftWatchNanoleaf WatchKit Extension
+//  SwiftuiWatchNanoleaf WatchKit Extension
 //
 //  Created by Renan Caldas on 23/05/20.
 //  Copyright © 2020 Renan Caldas. All rights reserved.
@@ -8,31 +8,34 @@
 
 import Foundation
 
-class Nanoleaf: ObservableObject {
-    @Published var IP: String
-    @Published var token: String
+let IP: String = "192.168.0.119:16021"
+let token: String = "RIuhkjxqsiyogaO5r05EZLOSJWRZtHjD"
+let baseUrl: String = "http://" + IP + "/api/v1/" + token
+
+func callMethod(method: String, completion: @escaping ((Data) -> Any)) {
+    let url = URL(string: baseUrl + method)!
     
-    init(IP: String, token: String) {
-        self.IP = IP
-        self.token = token
+    print("::: API ::: request()")
+    
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        guard let response = data else { return }
+        print("::: API ::: response ")
+        _ = completion(response) // Promise resolve
     }
     
+    task.resume()
+}
+
+class Nanoleaf: ObservableObject {
+    
     func getStatusAsync(completion: @escaping ((Data) -> Any)) {
-        let url = URL(string: "http://" + self.IP + "/api/v1/" + self.token)!
-        
-        print("::: API ::: getStatusAsync()")
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let status = data else { return }
-            print("::: API ::: RETURNING ")
-            _ = completion(status) // Promise resolve
+        callMethod(method: "") { (response) -> Void in
+             _ = completion(response)
         }
-        
-        task.resume()
     }
     
     func toggleLight(isOn: Bool) -> Void {
-        let url = URL(string: "http://" + self.IP + "/api/v1/" + self.token + "/state")!
+        let url = URL(string: "http://" + IP + "/api/v1/" + token + "/state")!
         
         print("::: API ::: toggleLight(" + String(isOn) + ")")
         
@@ -58,6 +61,3 @@ class Nanoleaf: ObservableObject {
         task.resume()
     }
 }
-
-
-
