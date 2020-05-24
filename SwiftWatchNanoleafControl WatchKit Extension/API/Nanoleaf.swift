@@ -8,18 +8,18 @@
 
 import Foundation
 
-let IP: String = "192.168.0.119:16021"
-let token: String = "RIuhkjxqsiyogaO5r05EZLOSJWRZtHjD"
-let baseUrl: String = "http://" + IP + "/api/v1/" + token
+private let IP: String = "192.168.0.119:16021"
+private let token: String = "RIuhkjxqsiyogaO5r05EZLOSJWRZtHjD"
+private let baseUrl: String = "http://" + IP + "/api/v1/" + token
+private let prefix: String = "[ Nanoleaf API ] "
 
 func callMethod(method: String, completion: @escaping ((Data) -> Any)) {
     let url = URL(string: baseUrl + method)!
-    
-    print("::: API ::: request()")
+    print(prefix + "callMethod()")
     
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         guard let response = data else { return }
-        print("::: API ::: response ")
+        print(prefix + "callMethod() finished and returning response...")
         _ = completion(response) // Promise resolve
     }
     
@@ -28,16 +28,18 @@ func callMethod(method: String, completion: @escaping ((Data) -> Any)) {
 
 class Nanoleaf: ObservableObject {
     
+    // getStatusAsync
     func getStatusAsync(completion: @escaping ((Data) -> Any)) {
         callMethod(method: "") { (response) -> Void in
              _ = completion(response)
         }
     }
     
-    func toggleLight(isOn: Bool) -> Void {
-        let url = URL(string: "http://" + IP + "/api/v1/" + token + "/state")!
+    // toggleLight
+    func toggleLight(isOn: Bool, completion: @escaping ((URLResponse?) -> Any)) {
+        let url = URL(string: baseUrl + "/state")!
         
-        print("::: API ::: toggleLight(" + String(isOn) + ")")
+        print(prefix + "toggleLight(" + String(isOn) + ")")
         
         let jsonObject: [String: Any] = [
             "on": [
@@ -46,7 +48,7 @@ class Nanoleaf: ObservableObject {
         ]
         
         let isValid = JSONSerialization.isValidJSONObject(jsonObject)
-        print("isValid: " + String(isValid))
+        print(prefix + "isValid: " + String(isValid))
         
         var request = URLRequest(url: url)
         request.httpMethod = "PUT"
@@ -54,8 +56,35 @@ class Nanoleaf: ObservableObject {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
-            guard let data = data else { return }
-            print(String(data: data, encoding: .utf8)!)
+            _ = completion(response)
+        }
+        
+        task.resume()
+    }
+    
+    // setBrightness
+    func setBrightness(value: Int, completion: @escaping ((URLResponse?) -> Any)) {
+        let url = URL(string: baseUrl + "/state")!
+        
+        print(prefix + "setBrightness(" + String(value) + ")")
+        
+        let jsonObject: [String: Any] = [
+            "brightness": [
+                "value": value,
+                "duration": 1,
+            ]
+        ]
+        
+        let isValid = JSONSerialization.isValidJSONObject(jsonObject)
+        print(prefix + "isValid: " + String(isValid))
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: jsonObject)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+            _ = completion(response)
         }
         
         task.resume()

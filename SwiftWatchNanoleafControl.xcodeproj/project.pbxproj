@@ -19,6 +19,8 @@
 		626F84992479D4B400A3A74A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626F84982479D4B400A3A74A /* Assets.xcassets */; };
 		626F849C2479D4B400A3A74A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626F849B2479D4B400A3A74A /* Preview Assets.xcassets */; };
 		626F84AE2479D53000A3A74A /* Nanoleaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F84AD2479D53000A3A74A /* Nanoleaf.swift */; };
+		626F84BD2479DDA400A3A74A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F84BC2479DDA400A3A74A /* HomeView.swift */; };
+		626F84BF2479DDAF00A3A74A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626F84BE2479DDAF00A3A74A /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		626F849D2479D4B400A3A74A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626F849E2479D4B400A3A74A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		626F84AD2479D53000A3A74A /* Nanoleaf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nanoleaf.swift; sourceTree = "<group>"; };
+		626F84BC2479DDA400A3A74A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		626F84BE2479DDAF00A3A74A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				626F84AC2479D52300A3A74A /* API */,
+				626F84BC2479DDA400A3A74A /* HomeView.swift */,
+				626F84BE2479DDAF00A3A74A /* SplashView.swift */,
 				626F848E2479D4B400A3A74A /* ContentView.swift */,
 				626F84902479D4B400A3A74A /* HostingController.swift */,
 				626F84922479D4B400A3A74A /* ExtensionDelegate.swift */,
@@ -284,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				626F84912479D4B400A3A74A /* HostingController.swift in Sources */,
+				626F84BF2479DDAF00A3A74A /* SplashView.swift in Sources */,
+				626F84BD2479DDA400A3A74A /* HomeView.swift in Sources */,
 				626F84AE2479D53000A3A74A /* Nanoleaf.swift in Sources */,
 				626F848F2479D4B400A3A74A /* ContentView.swift in Sources */,
 				626F84952479D4B400A3A74A /* NotificationController.swift in Sources */,

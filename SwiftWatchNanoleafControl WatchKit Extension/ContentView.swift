@@ -9,59 +9,30 @@
 import SwiftUI
 
 private let nanoleaf = Nanoleaf()
+private let prefix: String = "[ ContentView ] "
 
-class ViewModel: ObservableObject {
-    var isToggled: Bool = false {
-        didSet {
-            print("isToggled didSet handler")
-            nanoleaf.toggleLight(isOn: isToggled)
+struct ContentView: View {
+    @State private var isLoaded = false
+        
+    func onRender() -> Void {
+        print(prefix + ":: onRender ContentView")
+        nanoleaf.getStatusAsync() { (status) -> Void in
+            print(prefix + String(data: status, encoding: .utf8)!) // Parsing data
+            
+            self.isLoaded.toggle()
         }
     }
     
-    var sliderValue: Double = 0 {
-        didSet {
-            print("sliderValue: " + String(sliderValue))
-            // nanoleaf.toggleLight(isOn: isToggled)
-        }
-    }
-}
-
-struct ContentView: View {
-    @ObservedObject var model = ViewModel()
-
     var body: some View {
         VStack(alignment: .leading) {
-            // Title
-            HStack {
-                Text("Nanoleaf")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .fixedSize()
-                
-                Toggle("", isOn: $model.isToggled)
+            if (isLoaded) {
+                HomeView()
+            } else {
+                SplashView()
             }
-
-            
-            Spacer()
-            
-            // Brighness
-            Slider(value: $model.sliderValue, in: 0...10, step: 1)
-                .accentColor(Color.green)
-                .rotation3DEffect(Angle(degrees: 20), axis: (x: 1.0, y: 0.0, z: 0.0))
-                
-            // GetStatus()
-            /*
-            Button(action: {
-                print("Clicked getStatus()")
-                nanoleaf.getStatusAsync() { (status) -> Void in
-                    print(String(data: status, encoding: .utf8)!) // Parsing data
-                }
-            }) {
-                Text("GetStatus()")
-            }
-            */
         }
         .padding(.all)
+        .onAppear { self.onRender() }
     }
 }
 
@@ -70,3 +41,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
