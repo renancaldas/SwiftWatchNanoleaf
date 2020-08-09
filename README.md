@@ -1,2 +1,10 @@
 # SwiftWatchNanoleaf
-A SwiftUI app for WatchOS to control Nanoleaf light panels
+
+A Nanoleaf controller using SwiftUI for Apple Watch (in progress).
+
+![SwiftWatchNanoleaf](https://raw.githubusercontent.com/renancaldas/SwiftWatchNanoleaf/master/screen.png)
+
+# Author
+Renan Caldas de Oliveira
+
+- Web: http://www.renancaldas.com
