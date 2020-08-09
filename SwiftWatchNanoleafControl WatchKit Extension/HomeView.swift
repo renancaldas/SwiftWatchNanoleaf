@@ -45,9 +45,20 @@ struct HomeView: View {
                 
                 Toggle("", isOn: $model.isToggled)
             }
-
             
-            Spacer()
+            HStack {
+                NavigationLink(destination: SplashView()) {
+                    Text("RGB")
+                }
+                
+                NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                    Text("Temp")
+                }
+            }
+
+            // Spacer()
+            
+            
             
             // Brighness
             Slider(value: $model.sliderValue, in: 0...100, step: 10)

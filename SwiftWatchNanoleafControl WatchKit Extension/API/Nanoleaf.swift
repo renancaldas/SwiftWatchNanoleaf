@@ -36,7 +36,7 @@ class Nanoleaf: ObservableObject {
     }
     
     // toggleLight
-    func toggleLight(isOn: Bool, completion: @escaping ((URLResponse?) -> Any)) {
+    func toggleLight(isOn: Bool) {
         let url = URL(string: baseUrl + "/state")!
         
         print(prefix + "toggleLight(" + String(isOn) + ")")
@@ -55,15 +55,13 @@ class Nanoleaf: ObservableObject {
         request.httpBody = try? JSONSerialization.data(withJSONObject: jsonObject)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
-            _ = completion(response)
-        }
+        let task = URLSession.shared.dataTask(with: request)
         
         task.resume()
     }
     
     // setBrightness
-    func setBrightness(value: Int, completion: @escaping ((URLResponse?) -> Any)) {
+    func setBrightness(value: Int) {
         let url = URL(string: baseUrl + "/state")!
         
         print(prefix + "setBrightness(" + String(value) + ")")
@@ -83,9 +81,7 @@ class Nanoleaf: ObservableObject {
         request.httpBody = try? JSONSerialization.data(withJSONObject: jsonObject)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
-            _ = completion(response)
-        }
+        let task = URLSession.shared.dataTask(with: request)
         
         task.resume()
     }
